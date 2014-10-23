@@ -1,0 +1,25 @@
+// Place all the styles related to the external controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html { height: 93%; } 
+body { height: 100%; }
+
+#main-container,
+{ height: 100% }
+
+.container {
+	width:100%;
+}
+
+.app-iframe {
+  display: block;
+  margin: 0;
+  padding: 0px;
+  border: none;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
