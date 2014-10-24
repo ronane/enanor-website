@@ -8,28 +8,57 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Experience.create!(
-	title: 'Stage d\'ingégration SEAndroid', 
+	notes: 'Stage de Master 2', 
 	place:'STMicroelectronics - Le Mans (72)' , 
 	date: DateTime.civil_from_format(:utc,2013), 
-	notes:'Intégration d\'un framework de sécurité au sein d\'une plate-forme Android ')
+	title:'Intégration d\'un framework de sécurité au sein d\'une plate-forme Android ')
+
 Experience.create!(
-	title: 'Stage de développement Android', place:'ST-Ericsson - Le Mans (72)' , 
+	notes: 'Stage de Master 1',
+	place:'ST-Ericsson - Le Mans (72)' , 
 	date: DateTime.civil_from_format(:utc,2012), 
-	notes:'Portage de l\'application iOS AllScools vers Android')
+	title:'Portage de l\'application iOS AllScools vers Android')
+
 Experience.create!(
-	title: 'Projet de fin de Master 1 : Lisa2', 
+	notes: 'Projet de fin de Master 1', 
 	place:'Université du Maine - Le Mans (72)' , 
 	date: DateTime.civil_from_format(:utc,2012), 
-	notes:'Développement d\'une application de transcription vidéo')
+	title:'Développement d\'une application de transcription vidéo : Lisa2')
+
 Experience.create!(
-	title: 'Animateur de Cybercommune', place:'Arzon (56)' , 
+	title: 'Animateur de Cybercommune', 
+	place:'Arzon (56)', 
 	date: DateTime.civil_from_format(:utc,2011), 
-	notes:'Accueil et annimations dans une salle équipée de postes informatiques')
+	notes:'Travail d\'été')
+
 Experience.create!(
-	title: 'Projet de fin de Licence 3', 
+	notes: 'Projet de fin de Licence 3', 
 	place:'Université du Maine - Le Mans (72)' , 
 	date: DateTime.civil_from_format(:utc,2010), 
-	notes:'Développement d\'une application de gestion de conférences')
+	title:'Développement d\'une application de gestion de conférences')
+
+Experience.create!(
+	notes: 'Stage de fin de DUT', 
+	place:'Renault - Le Mans (72)' , 
+	date: DateTime.civil_from_format(:utc,2010), 
+	title:'Développement d\'un système d\'exportation des données du logiciel Producim')
+
+Experience.create!(
+	notes: 'Projet de synthèse de DUT', 
+	place:'IUT de Vannes (56)' , 
+	date: DateTime.civil_from_format(:utc,2010), 
+	title:'Système d\'analyse des contrôles pour l\'inspection du travail du Finistère')
+
+Experience.create!(
+	notes: 'Projet de fin de 1ère année de DUT', 
+	place:'IUT de Vannes (56)' , 
+	date: DateTime.civil_from_format(:utc,2009), 
+	title:'Client de messagerie type e-mail pour PDA')
+
+Experience.create!(
+	notes: 'Projet personnel', 
+	date: DateTime.civil_from_format(:utc,2004), 
+	title:'Robot de divertissement sur IRC')
 
 Training.create!(
 	title: 'Master Informatique',
