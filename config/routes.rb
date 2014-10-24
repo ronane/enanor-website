@@ -2,14 +2,11 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   get 'music', to: 'external#music'
-  get 'mail', to: 'external#mail'
   get 'torrent', to: 'external#torrent'
   get 'rss', to: 'external#rss'
   get 'dynmap', to: 'external#map'
 
   get 'cv', to: 'cv#index'
-
-  resources :experiences
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
