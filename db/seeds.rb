@@ -23,7 +23,7 @@ Experience.create!(
 	notes: 'Projet de fin de Master 1', 
 	place:'Université du Maine - Le Mans (72)' , 
 	date: DateTime.civil_from_format(:utc,2012), 
-	title:'Développement d\'une application de transcription vidéo : Lisa2')
+	title:'Application de transcription vidéo : Lisa2')
 
 Experience.create!(
 	title: 'Animateur de Cybercommune', 
@@ -35,19 +35,19 @@ Experience.create!(
 	notes: 'Projet de fin de Licence 3', 
 	place:'Université du Maine - Le Mans (72)' , 
 	date: DateTime.civil_from_format(:utc,2010), 
-	title:'Développement d\'une application de gestion de conférences')
+	title:'Application de gestion de conférences')
 
 Experience.create!(
 	notes: 'Stage de fin de DUT', 
 	place:'Renault - Le Mans (72)' , 
 	date: DateTime.civil_from_format(:utc,2010), 
-	title:'Développement d\'un système d\'exportation des données du logiciel Producim')
+	title:'Système d\'exportation des données du logiciel Producim')
 
 Experience.create!(
 	notes: 'Projet de synthèse de DUT', 
 	place:'IUT de Vannes (56)' , 
 	date: DateTime.civil_from_format(:utc,2010), 
-	title:'Système d\'analyse des contrôles pour l\'inspection du travail du Finistère')
+	title:'Application d\'analyse des contrôles pour l\'inspection du travail du Finistère')
 
 Experience.create!(
 	notes: 'Projet de fin de 1ère année de DUT', 
@@ -65,21 +65,25 @@ Training.create!(
 	place: 'Université du Maine - Le Mans (72)',
 	start_date: DateTime.civil_from_format(:utc,2011),
 	end_date: DateTime.civil_from_format(:utc,2013))
+
 Training.create!(
 	title: 'Licence 3 Informatique',
 	place: 'Université du Maine - Le Mans (72)',
 	start_date: DateTime.civil_from_format(:utc,2010),
 	end_date: DateTime.civil_from_format(:utc,2011))
+
 Training.create!(
 	title: 'DUT Informatique',
 	place: 'IUT de Vannes (56)',
 	start_date: DateTime.civil_from_format(:utc,2008),
 	end_date: DateTime.civil_from_format(:utc,2010))
+
 Training.create!(
 	title: 'Licence de Physique-Chimie',
 	place: 'Université du Maine - Le Mans (72)',
 	start_date: DateTime.civil_from_format(:utc,2006),
 	end_date: DateTime.civil_from_format(:utc,2008))
+
 Training.create!(
 	title: 'Baccalauréat Scientifique, mention AB',
 	place: 'Lycée Sud - Le Mans (72)',
