@@ -1,9 +1,10 @@
-<h2 id='toggleExperiences'><span id='experienceButton'></span>Experiences </h2>
+<h2 id='toggleExperiences'><span id='experienceButton'></span>Expériences </h2>
 
 <div id='experiences'>
 	<% @experiences.each do |experience| %>
-	<h3><%= experience.date.year %> - <%= experience.title %> </h3>
-	<p class="place"><%= experience.place %></p>
+	<h3><%= experience.title %> </h3>
+ 
+	<p class="place"><%= experience.date.year %> <% if not (experience.date.nil? ||  experience.place.nil?) %> - <% end %> <%= experience.place %></p>
 	<p><%= experience.notes %></p>
 	<% end %>
 </div>
