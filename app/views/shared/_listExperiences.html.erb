@@ -1,9 +1,9 @@
-<h2>Experiences</h2>
+<h2 id='toggleExperiences'><span id='experienceButton'></span>Experiences </h2>
 
-<% @experiences.each do |experience| %>
-<h3><%= experience.date.year %> - <%= experience.title %> </h3>
-<p class="place"><%= experience.place %></p>
-<p><%= experience.notes %></p>
-<% end %>
-
-
+<div id='experiences'>
+	<% @experiences.each do |experience| %>
+	<h3><%= experience.date.year %> - <%= experience.title %> </h3>
+	<p class="place"><%= experience.place %></p>
+	<p><%= experience.notes %></p>
+	<% end %>
+</div>

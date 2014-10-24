@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'rss', to: 'external#rss'
   get 'dynmap', to: 'external#map'
 
+  get 'cv', to: 'cv#index'
 
   resources :experiences
 

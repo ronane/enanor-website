@@ -1,0 +1,9 @@
+<h2 id='toggleTrainings'><span id='trainingButton'></span>Trainings</h2>
+<div id='trainings'>
+	<% @trainings.each do |training| %>
+		<h3><%= training.start_date.year %> <% if not training.end_date.nil? %> → <%= training.end_date.year %> <% end %> - <%= training.title %> </h3>
+	<p class="place"><%= training.place %></p>
+	<% end %>
+</div>
+
+
