@@ -5,3 +5,31 @@
 .tags:before {
 	content: "tags :";
 }
+
+//things related to search
+div#search {
+	margin-top: 5px;
+}
+
+input#search-clear {
+	display: none;
+	background-image: url(/assets/ic_clear_24px.svg);
+	height: 24px;
+	width: 24px;
+	border: none;
+}
+
+input#search-submit {
+	background-image: url(/assets/ic_search_24px.svg);
+	height: 24px;
+	width: 24px;
+	border:none;
+}
+
+.searchDontMatch {
+	display: none;
+}
+
+.searchMatch {
+	display: initial;
+}

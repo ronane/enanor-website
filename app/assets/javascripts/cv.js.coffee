@@ -26,3 +26,47 @@ ready = ->
 
 $(document).ready(ready);
 $(document).on('page:load', ready);
+
+searchWord = (word) -> 
+	jQuery ->
+		tags = $('.tags:contains(\''+word+'\')')
+		tags.parent().removeClass('searchDontMatch').addClass('searchMatch');
+
+		titles = $('.title:contains(\''+word+'\')')
+		titles.parent().removeClass('searchDontMatch').addClass('searchMatch');
+
+		places = $('.place:contains(\''+word+'\')')
+		places.parent().removeClass('searchDontMatch').addClass('searchMatch');
+		
+		notes = $('.note:contains(\''+word+'\')')
+		notes.parent().removeClass('searchDontMatch').addClass('searchMatch');
+
+		if (tags.size() + titles.size() + places.size() + notes.size() == 0)
+			$('#experiences').append("<p id='noResult'> Aucun résultat, essayez une autre recherche</p>")
+		else
+			$('#noResult').remove()
+
+search = ->
+	jQuery ->
+		$('div.experience').removeClass('searchMatch').addClass('searchDontMatch');
+		searchValue = $('#searchbox').val()
+		keywords = searchValue.split(' ')
+		if (searchValue.length > 0) 
+			$('#search-clear').show()
+		else
+			$('#search-clear').hide()
+			
+		searchWord word for word in keywords 
+
+jQuery -> $('#search-submit').click (event) ->
+	event.preventDefault()
+	event.stopPropagation()
+	search()
+
+jQuery -> $('#search-clear').click (event) ->
+	event.preventDefault()
+	event.stopPropagation()
+	$('#search-clear').hide()
+	$('#searchbox').val('')
+	search()
+
