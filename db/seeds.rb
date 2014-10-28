@@ -16,13 +16,13 @@ Experience.create!(
 Experience.create!(
 	notes: 'Stage de Master 1',
 	place:'ST-Ericsson - Le Mans (72)' , 
-	date: DateTime.civil_from_format(:utc,2012), 
+	date: DateTime.civil_from_format(:utc,2012,9), 
 	title:'Portage de l\'application iOS AllScools vers Android')
 
 Experience.create!(
 	notes: 'Projet de fin de Master 1', 
 	place:'Université du Maine - Le Mans (72)' , 
-	date: DateTime.civil_from_format(:utc,2012), 
+	date: DateTime.civil_from_format(:utc,2012,4), 
 	title:'Application de transcription vidéo : Lisa2')
 
 Experience.create!(
