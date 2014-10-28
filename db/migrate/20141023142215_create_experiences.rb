@@ -5,8 +5,6 @@ class CreateExperiences < ActiveRecord::Migration
       t.string :place
       t.datetime :date
       t.text :notes
-
-      t.timestamps
     end
   end
 end
