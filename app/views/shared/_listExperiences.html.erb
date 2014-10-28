@@ -6,6 +6,6 @@
  
 	<p class="place"><%= experience.date.year %> <% if not (experience.date.nil? ||  experience.place.nil?) %> - <% end %> <%= experience.place %></p>
 	<p><%= experience.notes %></p>
-	<% if experience.tags.size > 0 %> <p>tags: <% experience.tags.each do |t| %> <%= t.label + " " %> <% end %> </p> <% end %>
+	<% if experience.tags.size > 0 %> <p class='tags'> <% experience.tags.each do |t| %> <%= t.label + " " %> <% end %> </p> <% end %>
 	<% end %>
 </div>
