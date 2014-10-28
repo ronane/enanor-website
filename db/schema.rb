@@ -21,20 +21,18 @@ ActiveRecord::Schema.define(version: 20141028102546) do
   end
 
   create_table "skills", force: true do |t|
-    t.integer  "experience_id"
-    t.integer  "tag_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "experience_id"
+    t.integer "tag_id"
   end
 
   add_index "skills", ["experience_id"], name: "index_skills_on_experience_id"
   add_index "skills", ["tag_id"], name: "index_skills_on_tag_id"
 
   create_table "tags", force: true do |t|
-    t.string "tag"
+    t.string "label"
   end
 
-  add_index "tags", ["tag"], name: "index_tags_on_tag", unique: true
+  add_index "tags", ["label"], name: "index_tags_on_label", unique: true
 
   create_table "trainings", force: true do |t|
     t.string   "title"
