@@ -89,3 +89,8 @@ Training.create!(
 	place: 'Lycée Sud - Le Mans (72)',
 	start_date: DateTime.civil_from_format(:utc,2005))
 
+tags = ['android','sécurité','performance','java','test','html','css','perl','xml','audio','video','libre','opensource','vente','assitance','dépannage','chef de projet','trac','svn','git','ruby','gtk','Tk','oracle','uml','conception','symfony','php','MySQL','jUnit','DokuWiki']
+
+tags.each { |t|
+	Tag.create!(tag:t)
+}
