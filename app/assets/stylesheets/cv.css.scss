@@ -13,14 +13,14 @@ div#search {
 
 input#search-clear {
 	display: none;
-	background-image: url(/assets/ic_clear_24px.svg);
+	background-image: asset-url("ic_clear_24px.svg");
 	height: 24px;
 	width: 24px;
 	border: none;
 }
 
 input#search-submit {
-	background-image: url(/assets/ic_search_24px.svg);
+	background-image: asset-url("ic_search_24px.svg");
 	height: 24px;
 	width: 24px;
 	border:none;
