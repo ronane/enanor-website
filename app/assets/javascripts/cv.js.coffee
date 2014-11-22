@@ -16,7 +16,7 @@ ready = ->
 			$('#experiences').slideToggle()
 			$('#experienceButton').text(if icon == '▼' then '▲' else '▼')
 
-	#Toggle Trainings 
+	#Toggle Trainings
 	jQuery ->
 		$('#trainingButton').text('▲')
 		$('#trainings').hide()
@@ -33,7 +33,7 @@ $(document).on('page:load', ready);
 # Search
 #
 
-searchWord = (word) -> 
+searchWord = (word) ->
 	jQuery ->
 		tags = $('.tags:contains(\''+word+'\')')
 		tags.parent().removeClass('searchDontMatch').addClass('searchMatch');
@@ -43,7 +43,7 @@ searchWord = (word) ->
 
 		places = $('.place:contains(\''+word+'\')')
 		places.parent().removeClass('searchDontMatch').addClass('searchMatch');
-		
+
 		notes = $('.note:contains(\''+word+'\')')
 		notes.parent().removeClass('searchDontMatch').addClass('searchMatch');
 
@@ -57,21 +57,19 @@ search = ->
 		$('div.experience').removeClass('searchMatch').addClass('searchDontMatch');
 		searchValue = $('#searchbox').val()
 		keywords = searchValue.split(' ')
-		if (searchValue.length > 0) 
+		if (searchValue.length > 0)
 			$('#search-clear').show()
 		else
 			$('#search-clear').hide()
-			
-		searchWord word for word in keywords 
+
+		searchWord word for word in keywords
 
 jQuery -> $('#search-submit').click (event) ->
 	event.preventDefault()
-	event.stopPropagation()
 	search()
 
 jQuery -> $('#search-clear').click (event) ->
 	event.preventDefault()
-	event.stopPropagation()
 	$('#search-clear').hide()
 	$('#searchbox').val('')
 	search()
