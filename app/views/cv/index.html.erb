@@ -1,8 +1,8 @@
 <div class="col-md-3">
 	<h1>Ronan Trotin</h1>
 	<p class="address">89 route de Parigné l'Évêque<br/>72560 Changé, France</p>
-	<a class="phone" href="callto:+33689859133">+33 6 89 85 91 33</p>
-	<a class="email" href="mailto:ronan.trotin@gmail.com">ronan.trotin@gmail.com</a>
+	<p><a class="phone" href="callto:+33689859133">+33 6 89 85 91 33</a></p>
+	<p><a class="email" href="mailto:ronan.trotin@gmail.com">ronan.trotin@gmail.com</a></p>
 
 	<div id="search">
 		<form action="" id="search_form">
@@ -11,14 +11,26 @@
 			<input id="search-clear" type=submit value="" />
 		</form>
 	</div>	
-
 </div>
 
 <div class="col-md-5">
-	<%= render 'shared/listExperiences' %>
+	<h2 id='toggleExperiences'><span id='experienceButton'></span>Expériences </h2>
+	<div id='experiences'>
+<% @experiences.each do |experience| %>
+		<div class="experience">
+			<h3 class="title"><%= experience.title %></h3>
+			<p class="place"><%= experience.date.year %><% if not (experience.date.nil? ||  experience.place.nil?) %> - <% end %><%= experience.place %></p>
+			<p class="notes"><%= experience.notes %></p>
+			<% if experience.tags.size > 0 %><p class='tags'><% experience.tags.each do |t| %><%= t.label + " " %><% end %></p><% end %>
+		</div>
+<% end %>
+	</div>
 </div>
 
 <div class="col-md-4">
-	<%= render 'shared/listTrainings' %>
+	<h2 id='toggleTrainings'><span id='trainingButton'></span>Scolarité</h2>
+	<div id='trainings'><% @trainings.each do |training| %>
+		<h3><%= training.start_date.year %><% if not training.end_date.nil? %> → <%= training.end_date.year %><% end %> - <%= training.title %></h3>
+		<p class="place"><%= training.place %></p><% end %>
+	</div>
 </div>
-
