@@ -2,11 +2,6 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 
 #Create Training
 
@@ -55,6 +50,17 @@ end
 #Create Experiences
 
 e = Experience.create!(
+	notes: 'Projet personnel', 
+	date: DateTime.civil_from_format(:utc,2014), 
+	title:'Développement d\'une application d\'arbitrage de Bitcoin')
+
+addSkillTo e, 'Java'
+addSkillTo e, 'Bitcoin'
+addSkillTo e, 'API REST'
+addSkillTo e, 'Agile'
+addSkillTo e, 'MySQL'
+
+e = Experience.create!(
 	notes: 'Stage de Master 2', 
 	place:'STMicroelectronics - Le Mans (72)' , 
 	date: DateTime.civil_from_format(:utc,2013), 
@@ -72,7 +78,7 @@ e = Experience.create!(
 	date: DateTime.civil_from_format(:utc,2012,9), 
 	title:'Portage de l\'application iOS AllScools vers Android')
 
-addSkillTo e, 'java'
+addSkillTo e, 'Java'
 addSkillTo e, 'android'
 addSkillTo e, 'xml'
 
